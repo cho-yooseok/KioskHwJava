@@ -8,7 +8,7 @@ public class Kiosk {
         // 사용자 입력을 받을 Scanner 객체 생성
         Scanner scanner = new Scanner(System.in);
 
-        // 사용자가 선택한 메뉴 번호를 저장할 변수
+        // 사용자가 선택한 메뉴 번호를 저장할 변수 선언
         int choice;
 
         // 사용자가 종료할 때까지 계속 반복
@@ -18,6 +18,8 @@ public class Kiosk {
 
             // 사용자의 입력을 문자열로 받음 (입력값 앞뒤 공백 제거)
             String input = scanner.nextLine().trim();
+            //사용자가 실수로 입력값 앞이나 뒤에 공백을 추가했을 경우 오류방지위해 trim
+
 
             // 문자열로 받은 입력값을 정수(int)로 변환
             choice = Integer.parseInt(input);
