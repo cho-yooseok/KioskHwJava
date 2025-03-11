@@ -40,17 +40,17 @@ class MenuItem {
 
 // 키오스크 클래스 (전체 프로그램의 흐름을 관리)
 public class Kiosk {
-    private List<MenuItem> menuList; // 메뉴 리스트를 저장하는 변수
+    private List<MenuItem> menuList; // 메뉴 리스트를 저장하는 변수 //MenuItem을 관리하는 리스트가 필드로 존재
     private Scanner scanner; // 사용자 입력을 받는 도구
 
-    // 생성자: 메뉴 리스트와 스캐너를 설정
+    // 생성자: 메뉴 리스트와 스캐너를 설정 //Kiosk 생성자 , menuItems 값을 넘겨 받아 초기화
     public Kiosk(List<MenuItem> menuList) {
-        this.menuList = menuList;
+        this.menuList = menuList;   //넘겨받은 값을 필드에 할당
         this.scanner = new Scanner(System.in);
     }
 
     // 키오스크 프로그램을 시작하는 메서드
-    public void start() {
+    public void start() {   //입력과 반복문 로직 start 함수에서 관리
         // 사용자가 0을 입력할 때까지 반복
         while (true) {
             displayMenu(); // 메뉴를 보여줌
@@ -106,14 +106,14 @@ public class Kiosk {
 
     // 프로그램 시작점 (메인 메서드)
     public static void main(String[] args) {
-        // 메뉴 리스트를 만들고 메뉴 항목들을 추가
+        // MenuItem 리스트를 준비  , 메뉴 항목들을 추가
         List<MenuItem> menuList = new ArrayList<>();
         menuList.add(new MenuItem("ShackBurger", 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거"));
         menuList.add(new MenuItem("SmokeShack", 8.9, "베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거"));
         menuList.add(new MenuItem("Cheeseburger", 6.9, "포테이토 번과 비프패티, 치즈가 토핑된 치즈버거"));
         menuList.add(new MenuItem("Hamburger", 5.4, "비프패티를 기반으로 야채가 들어간 기본버거"));
 
-        // Kiosk 객체를 만들고 키오스크 프로그램을 시작
+        // Kiosk 객체를 만들고 키오스크 프로그램을 시작  //Kiosk 객체를 생성할 때 menuItems 리스트를 넘겨줌
         Kiosk kiosk = new Kiosk(menuList);    //이때 menuList 라는 값을 생성자에 전달해서 Kiosk객체가 생성될때 메뉴목록을 초기화
         kiosk.start(); // 프로그램을 실행
     }
