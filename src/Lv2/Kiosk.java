@@ -17,7 +17,7 @@ class MenuItem {
         this.menuDescription = menuDescription; // 메뉴 설명 설정
     }
 
-    // 메뉴 정보를 출력하는 메서드 (메뉴 번호도 함께 출력)
+    // 메뉴 정보를 출력하는 메서드 (메뉴 번호도 함께 출력)   // 맨아래쪽 키오스트 클래스 ->디스플레이메뉴메서드쪽에서 써먹음
     public void printMenuInfo(int menuIndex) {
         System.out.println(menuIndex + ". " + menuName + " | W " + menuPrice + " | " + menuDescription);
     }
@@ -83,7 +83,7 @@ public class Kiosk {
                 break; // 반복문 종료
             } else if (menuChoice > 0 && menuChoice <= menuList.size()) {
                 // 사용자가 고른 메뉴가 있으면 그 메뉴를 보여줌
-                MenuItem chosenMenu = menuList.get(menuChoice - 1); // 사용자가 선택한 메뉴 가져오기
+                MenuItem chosenMenu = menuList.get(menuChoice - 1); // 사용자가 선택한 메뉴 가져오기  리스트는0부터시작하니까 -1 해준다
                 System.out.println("-> 선택한 메뉴: " + chosenMenu.getMenuName()); // 선택한 메뉴 이름 출력
                 System.out.println("가격: W " + chosenMenu.getMenuPrice() + " | 설명: " + chosenMenu.getMenuDescription()); // 가격과 설명 출력
             } else {
@@ -107,3 +107,4 @@ public class Kiosk {
         System.out.print("메뉴 번호를 입력하세요: "); // 사용자가 메뉴를 입력할 수 있게 안내
     }
 }
+
