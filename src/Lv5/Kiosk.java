@@ -1,4 +1,4 @@
-package Lv4;
+package Lv5;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,9 @@ import java.util.Scanner;
 
 // 메뉴 아이템 클래스 (각 개별 메뉴 정보를 저장하는 클래스)
 class MenuItem {
+    // 메뉴 이름
     private String name;        // 메뉴 이름
+    // 메뉴 가격
     private double price;       // 메뉴 가격
     private String description; // 메뉴 설명
 
@@ -27,8 +29,6 @@ class MenuItem {
     public double getPrice() { return price; }
     public String getDescription() { return description; }
 }
-
-
 
 // 카테고리별 메뉴를 관리하는 클래스
 class Menu {
@@ -81,20 +81,18 @@ public class Kiosk {
         burgerMenu.addMenuItem(new MenuItem("SmokeShack", 8.9, "베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거"));
         burgerMenu.addMenuItem(new MenuItem("Cheeseburger", 6.9, "포테이토 번과 비프패티, 치즈가 토핑된 치즈버거"));
         burgerMenu.addMenuItem(new MenuItem("Hamburger", 5.4, "비프패티를 기반으로 야채가 들어간 기본버거"));
+        menus.add(burgerMenu);
 
         // 음료 카테고리 생성 및 추가
         Menu drinkMenu = new Menu("Drinks");
         drinkMenu.addMenuItem(new MenuItem("Coca Cola", 2.5, "시원한 코카콜라"));
         drinkMenu.addMenuItem(new MenuItem("Sprite", 2.5, "청량한 스프라이트"));
+        menus.add(drinkMenu);
 
         // 디저트 카테고리 생성 및 추가
         Menu dessertMenu = new Menu("Desserts");
         dessertMenu.addMenuItem(new MenuItem("Chocolate Cake", 4.5, "진한 초콜릿 케이크"));
         dessertMenu.addMenuItem(new MenuItem("MintChoco Cookie", 5.5, "달콤시원한 민트초코 쿠키"));
-
-        // 전체 메뉴 리스트에 카테고리 추가
-        menus.add(burgerMenu);
-        menus.add(drinkMenu);
         menus.add(dessertMenu);
     }
 
