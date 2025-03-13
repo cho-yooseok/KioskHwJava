@@ -25,9 +25,17 @@ class MenuItem {
     }
 
     // Getter 메서드들 (각 변수에 접근할 수 있도록 제공)
-    public String getName() { return name; }
-    public double getPrice() { return price; }
-    public String getDescription() { return description; }
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 }
 
 // 카테고리별 메뉴를 관리하는 클래스
@@ -57,8 +65,13 @@ class Menu {
     }
 
     // Getter 메서드들
-    public String getCategoryName() { return categoryName; }
-    public List<MenuItem> getMenuItems() { return menuItems; }
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public List<MenuItem> getMenuItems() {
+        return menuItems;
+    }
 }
 
 // 키오스크 클래스 (메인 프로그램의 흐름을 관리하는 클래스)
