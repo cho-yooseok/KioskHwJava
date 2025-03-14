@@ -1,8 +1,10 @@
 package Lv5;
 
-import java.util.ArrayList; // 목록을 저장할 수 있는 ArrayList 기능을 가져옴
-import java.util.List; // 목록 관련 기능을 가져옴
-import java.util.Scanner; // 사용자 입력을 받을 수 있는 Scanner 기능을 가져옴
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.ArrayList; // 목록을 저장할 수 있는 ArrayList 기능을 가져옵니다.
+import java.util.List; // 목록 관련 기능을 가져옵니다.
+import java.util.Scanner; // 사용자 입력을 받을 수 있는 Scanner 기능을 가져옵니다.
 
 // 메뉴 아이템 클래스 (각 개별 메뉴 정보를 저장하는 클래스)
 // 예: "ShackBurger", 가격 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거"와 같은 정보를 담습니다.
@@ -207,3 +209,5 @@ public class Kiosk {
         kiosk.start(); // 키오스크 프로그램 시작
     }
 }
+
+
